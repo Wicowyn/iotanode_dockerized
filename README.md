@@ -25,7 +25,7 @@ NEIGHBORS = udp://ip_neighbors1:14600 tcp://ip_neighbors2:14600 udp://ip_neighbo
 
 ### Start your node 
 
-Once you downloaded or cloned this repo, you'll start a container running your node with docker :
+After modify your NEIGHBORS's list, start your node like this :
 ```
 docker run hystenal/iotanode_dockerized:latest
 ```
