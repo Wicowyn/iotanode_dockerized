@@ -14,20 +14,20 @@ Install the last version of docker there : https://docs.docker.com/install/#dock
 
 Clone the repo
 
-## Deployment
+### Deployment
 
 Go the 
 
-## Built With
+### Built With
 
 * [Docker](https://www.docker.com/)
 
-## Authors
+### Authors
 
 * **Matthieu LANVERT** - [Linkedin](https://www.linkedin.com/in/matthieu-lanvert-491032121/)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
+### License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
