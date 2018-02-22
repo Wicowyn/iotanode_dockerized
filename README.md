@@ -30,7 +30,8 @@ docker run hystenal/iotanode_dockerized:latest -d
 * **Matthieu LANVERT** - [Linkedin](https://www.linkedin.com/in/matthieu-lanvert-491032121/)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-Thanks to **Nicolas BARRANGER** - [Linkedin](https://www.linkedin.com/in/nicolas-barranger-962a70a6/)
+
+* Thanks to **Nicolas BARRANGER** - [Linkedin](https://www.linkedin.com/in/nicolas-barranger-962a70a6/)
 
 ### License
 
