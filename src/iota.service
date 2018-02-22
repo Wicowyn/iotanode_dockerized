@@ -1,0 +1,22 @@
+[Unit]
+Description=IOTA (IRI) full node
+After=network.target
+
+[Service]
+WorkingDirectory=/home/iota/node
+User=iota
+PrivateDevices=yes
+ProtectSystem=full
+Type=simple
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=mixed
+KillSignal=SIGTERM
+TimeoutStopSec=60
+ExecStart=/usr/bin/java -Xmx3000m -Djava.net.preferIPv4Stack=true -jar iri-1.4.2.1.jar -c iota.ini
+SyslogIdentifier=IRI
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
+Alias=iota.service
