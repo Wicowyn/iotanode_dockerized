@@ -45,6 +45,7 @@ docker run hystenal/iotanode_dockerized:latest -d
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 * Thanks to **Nicolas BARRANGER** - [Linkedin](https://www.linkedin.com/in/nicolas-barranger-962a70a6/)
+                                  - [Github](https://github.com/Wicowyn)
 
 ### License
 
