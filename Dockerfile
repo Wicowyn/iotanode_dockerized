@@ -20,24 +20,24 @@ RUN apt install software-properties-common -y \
     && apt install oracle-java8-installer curl wget jq git -y \
     && apt install oracle-java8-set-default -y 
 
-ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
-RUN export JAVA_HOME
+ARG iota_version
+ENV IOTA_VERSION=${iota_version:-1.4.2.1}
+
+ENV JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 EXPOSE 14600:14600/udp
 EXPOSE 14265:14265
 EXPOSE 15600:15600/tcp
 
-RUN useradd -s /usr/sbin/nologin -m iota 
-
-RUN sudo -u iota mkdir -p /home/iota/node /home/iota/node/ixi /home/iota/node/mainnetdb 
+RUN mkdir -p /home/iota /home/iota/ixi /home/iota/mainnetdb 
     
-RUN sudo -u iota wget -O /home/iota/node/iri-1.4.2.1.jar https://github.com/iotaledger/iri/releases/download/v1.4.2.1/iri-1.4.2.1.jar
+RUN wget --quiet -O /home/iota/iri.jar https://github.com/iotaledger/iri/releases/download/v${IOTA_VERSION}/iri-${IOTA_VERSION}.jar
 
-ADD src/iota.service /lib/systemd/system/iota.service
-
-ADD src/iota.ini /home/iota/node/iota.ini
+COPY src/iota.service /lib/systemd/system/iota.service
+COPY src/iota.ini /home/iota/iota.ini
 
 WORKDIR /home/iota
+VOLUME /home/iota/mainnetdb
 
 COPY src/entrypoint.sh /
 
