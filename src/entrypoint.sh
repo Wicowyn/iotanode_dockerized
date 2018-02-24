@@ -13,4 +13,4 @@ cd /home/iota
 
 echo "NEIGHBORS=$NEIGHBORS" >> iota.ini
 
-java -Xmx3000m -Djava.net.preferIPv4Stack=true -jar iri.jar -c iota.ini
+java -Xmx3000m -Djava.net.preferIPv4Stack=true -jar iri.jar -c iota.ini --remote
